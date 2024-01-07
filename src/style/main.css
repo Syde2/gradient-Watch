@@ -1,0 +1,19 @@
+@import url('./palette.module..css');
+
+
+body{
+	background-color: var(--gold);
+}
+
+.watch{
+	height: 300px;
+	width: 300px;
+	border-radius: 50%;
+	background-image: conic-gradient(
+		from 90deg,
+		var(--pavedGold), 
+		var(--shadowNight)
+		);
+
+  }
+  
