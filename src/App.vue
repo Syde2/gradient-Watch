@@ -49,10 +49,12 @@ function getCurrentHour(){
 	--petrolSlumber : #243640;
 }
 .watch{
-	height: 330px;
-	width: 300px;
-	border-radius: 30%;
-  border: 10px solid var(--petrolSlumber);
+	height: 236px;
+	width: 199px; 
+
+  position: absolute;
+  top: 46%;
+	border-radius: 18%;
 	background-image: conic-gradient(
 		from  v-bind(angle+'deg'),
 		var(--pavedGold), 
@@ -60,6 +62,7 @@ function getCurrentHour(){
 		);
 
   }
+
   
 
 </style>
