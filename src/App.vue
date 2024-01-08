@@ -31,13 +31,11 @@ function getCurrentHour(){
 </script>
 
 <template>
-  <h1>Progressive Watch </h1>
-  <div class="watch">
-    ANGLE :  {{ angle }}
-    HEURE : {{ heure }}
-
-  </div>
-
+<h1>Progressive Watch </h1>
+<pre> gradient as an hour hand.  </pre>
+<div class="container">
+  <div class="watch"></div>
+</div>
 </template>
 
 <style>
@@ -51,9 +49,10 @@ function getCurrentHour(){
 	--petrolSlumber : #243640;
 }
 .watch{
-	height: 300px;
+	height: 330px;
 	width: 300px;
-	border-radius: 50%;
+	border-radius: 30%;
+  border: 10px solid var(--petrolSlumber);
 	background-image: conic-gradient(
 		from  v-bind(angle+'deg'),
 		var(--pavedGold), 

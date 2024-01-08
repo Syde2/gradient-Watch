@@ -2,18 +2,17 @@
 
 
 body{
-	background-color: var(--gold);
+	background-color: var(--porcelainJasper);
 }
 
-.watch{
-	height: 300px;
-	width: 300px;
-	border-radius: 50%;
-	background-image: conic-gradient(
-		from 90deg,
-		var(--pavedGold), 
-		var(--shadowNight)
-		);
+h1{
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-  }
-  
+.container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 3rem;
+}
+
