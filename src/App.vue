@@ -34,7 +34,9 @@ function getCurrentHour(){
 <h1>Progressive Watch </h1>
 <pre> gradient as an hour hand.  </pre>
 <div class="container">
-  <div class="watch"></div>
+  <div class="watch">
+    <div class="mask"></div>
+  </div>
 </div>
 </template>
 
@@ -48,10 +50,10 @@ function getCurrentHour(){
 	--shadowNight : #2A4F61;
 	--petrolSlumber : #243640;
 }
+
 .watch{
 	height: 236px;
 	width: 199px; 
-
   position: absolute;
   top: 46%;
 	border-radius: 18%;
