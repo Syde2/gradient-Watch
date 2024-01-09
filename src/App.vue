@@ -1,31 +1,31 @@
 <script setup>
 import {computed, ref} from 'vue';
 
-const heure = getCurrentHour()
+const heureEnMinutes = ref(getTimeInMinutes())
 const angle = computed(()=>
-  convertirHeureEnAngle(heure)
+  convertirTempsEnAngle(heureEnMinutes.value)
 )
 
-function convertirHeureEnAngle(heure) {
+function convertirTempsEnAngle(heure) {
     // Définir les points de données
-    const pointsHeures = [0, 3, 6, 9, 12];
+    const pointsMinutes = [0, 180, 360, 540, 720];
     const pointsAngles = [0, 90, 180, 270, 360];
 
     // Interpoler l'angle en fonction de l'heure
-    const angleInterpole = interpolationLineaire(heure, pointsHeures[0], pointsAngles[0], pointsHeures[pointsHeures.length - 1], pointsAngles[pointsAngles.length - 1]);
-
+    const angleInterpole = interpolationLineaire(heure, pointsMinutes[0], pointsAngles[0], pointsMinutes[pointsMinutes.length - 1], pointsAngles[pointsAngles.length - 1]);
     return angleInterpole;
 }
-// Fonction d'interpolation linéaire
 function interpolationLineaire(x, x1, y1, x2, y2) {
     return y1 + (x - x1) * (y2 - y1) / (x2 - x1);
 }
-
-function getCurrentHour(){
+function getTimeInMinutes(){
   const time = new Date();
   const hours = time.getHours() % 12 || 12;
-  return(hours)
+  const minutes = time.getMinutes();
+  const totalMinutes = hours *60 + minutes
+  return( totalMinutes)
 }
+
 
 
 </script>
