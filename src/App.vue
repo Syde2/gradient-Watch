@@ -57,6 +57,8 @@ function getTimeInMinutes(){
   position: absolute;
   top: 46%;
 	border-radius: 18%;
+
+  z-index: 3;
 	background-image: conic-gradient(
 		from  v-bind(angle+'deg'),
 		var(--pavedGold), 
@@ -65,6 +67,5 @@ function getTimeInMinutes(){
 
   }
 
-  
 
 </style>
